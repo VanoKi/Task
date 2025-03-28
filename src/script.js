@@ -1,9 +1,9 @@
 const arr = [1, 2, 3]
-console.log(arr)
+// console.log(arr)
 arr[2] = 5
-console.log(arr)
+// console.log(arr)
 arr['string'] = 10
-console.log(arr)
+// console.log(arr)
 
 const users = [
     {
@@ -41,10 +41,14 @@ laptop.model = 'MackBook'
 laptop.model = 'Hp'
 
 Object.defineProperty(laptop, 'displaySize', {
-    value: '15'
+    value: '15',
+    enumerable: true
 })
 
 const descriptor = Object.getOwnPropertyDescriptor(laptop, 'displaySize')
 // console.log(descriptor)
 
-console.log(laptop)
+for (const laptopKey in laptop) {
+    console.log(laptopKey)
+}
+
