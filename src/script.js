@@ -48,7 +48,7 @@ Object.defineProperty(laptop, 'displaySize', {
 const descriptor = Object.getOwnPropertyDescriptor(laptop, 'displaySize')
 // console.log(descriptor)
 
-for (const laptopKey in laptop) {
-    console.log(laptopKey)
+for (const [key, value] of Object.entries(laptop)) {
+    console.log(key, value)
 }
 
