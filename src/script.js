@@ -48,7 +48,26 @@ Object.defineProperty(laptop, 'displaySize', {
 const descriptor = Object.getOwnPropertyDescriptor(laptop, 'displaySize')
 // console.log(descriptor)
 
-for (const [key, value] of Object.entries(laptop)) {
-    console.log(key, value)
+// for (const [key, value] of Object.entries(laptop)) {
+//     console.log(key, value)
+// }
+
+const animal = {
+    _hiddenName: 'Cat'
 }
+Object.defineProperty(animal, 'name', {
+    get: function () {
+        return this._hiddenName
+    },
+    set: function (value) {
+        this._hiddenName = value
+    }
+})
+
+const animal12 = {
+    name: 'here cat'
+}
+animal.name = 'Dog'
+console.log(animal.name)
+console.log(animal12.name)
 
