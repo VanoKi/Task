@@ -1,10 +1,13 @@
 type AddressType = {
-  street: any; // ПОДПРАВЛЯЕМ any
-  city: any; // ПОДПРАВЛЯЕМ any
+  street: string
+  city: string
 };
 
 type UserType = {
-  // ПРИДЕТСЯ САМОМУ)
+    id: number
+    name: string
+    age: number
+    address: AddressType
 };
 
 type UserListPropsType = {
