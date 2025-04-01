@@ -5,29 +5,6 @@ arr[2] = 5
 arr['string'] = 10
 // console.log(arr)
 
-const users = [
-    {
-        id: 1,
-        name: 'Bob',
-        isStudent: true,
-    },
-    {
-        id: 2,
-        name: 'Alex',
-        isStudent: true,
-    },
-    {
-        id: 3,
-        name: 'Ann',
-        isStudent: true,
-    },
-    {
-        id: 4,
-        name: 'Donald',
-        isStudent: true,
-    },
-]
-
 const laptop = {}
 Object.defineProperty(laptop, 'os', {
     value: 'MacOS',
