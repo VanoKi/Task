@@ -19,4 +19,11 @@ function _shift(arr) {
     return [firstEl, arr]
 }
 
-console.log(_shift(array))
+function reversed(arr) {
+    let reversedArray = []
+    for (let i = arr.length - 1; i > -1; i--) {
+        reversedArray.push(arr[i])
+    }
+    return reversedArray
+}
+console.log(reversed(array))
