@@ -26,4 +26,18 @@ function reversed(arr) {
     }
     return reversedArray
 }
-console.log(reversed(array))
+
+function _split(arr, simbol) {
+    const ans = []
+    let word = ''
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === simbol) {
+            ans.push(word)
+            word = ''
+            continue
+        }
+        word += arr[i]
+    }
+    return ans.concat(word)
+}
+console.log(_split('ac-dc', "-"))
