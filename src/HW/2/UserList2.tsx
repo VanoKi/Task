@@ -15,7 +15,7 @@ export const UserList2 = (props: UserList2PropsType) => {
 
 			<ul>
 			  {props.users.myFriends.map((user) => (
-			    <ВЫЗЫВАЕМ КОМПОНЕНТУ CurrentUser />
+			    <CurrentUser/>
 			  ))}
 			</ul>
 		</div>

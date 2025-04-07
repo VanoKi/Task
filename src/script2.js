@@ -40,4 +40,4 @@ function _split(arr, simbol) {
     }
     return ans.concat(word)
 }
-console.log(_split('ac-dc', "-"))
+console.log(_split('ac-dc', "-"))  
