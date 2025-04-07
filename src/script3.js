@@ -33,4 +33,5 @@ const myFriends = [
     { id: 10, name: 'Emily', age: 55, address: { street: '765 Aspen Blvd', city: 'Los Angeles' } },
 ]
 
-const filteredUsers = myFriends
+const filteredUsers = myFriends.filter(item => item.address.city === 'Los Angeles')
+console.log(filteredUsers)
