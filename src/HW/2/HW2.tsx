@@ -10,7 +10,7 @@ export type UserType = {
   id: number;
   name: string;
   age: number;
-  address: any; // пропиши типизацию
+  address: AddressType
 };
 
 export type UsersObjectType = {
