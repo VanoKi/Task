@@ -6,6 +6,7 @@ parent.onclick = (e) => {
 }
 
 btn.addEventListener('click', (e) => {
-    e.stopPropagation()
+    // e.stopPropagation()
+    e.preventDefault()
     console.log('click on button');
 })
