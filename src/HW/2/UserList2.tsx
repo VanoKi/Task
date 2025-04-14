@@ -1,9 +1,9 @@
 import {CurrentUser} from './CurrentUser';
-import {UsersObjectType} from './HW2';
+import {UserType, UsersObjectType} from './HW2';
 
 type UserList2PropsType = {
-	users: any // пропиши типизацию
-	filterUsers: any // пропиши типизацию
+	users: UsersObjectType
+	filterUsers: () => void
 };
 
 export const UserList2 = (props: UserList2PropsType) => {
@@ -14,8 +14,8 @@ export const UserList2 = (props: UserList2PropsType) => {
 			<button id={'hw02-filter-button'} onClick={() => props.filterUsers}>SHOW ME FRIENDS FROM LA</button>
 
 			<ul>
-			  {props.users.myFriends.map((user: UsersObjectType) => (
-			    <CurrentUser user={user}/>
+			  {props.users.myFriends.map((user: UserType) => (
+			    <CurrentUser key={user.id} user={user}/>
 			  ))}
 			</ul>
 		</div>

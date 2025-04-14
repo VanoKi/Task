@@ -14,7 +14,7 @@ export type UserType = {
 };
 
 export type UsersObjectType = {
-  myFriends: any
+  myFriends: UserType[]
 };
 
 export const HW2 = () => {
