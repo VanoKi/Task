@@ -38,21 +38,17 @@ const tasks2 = {
     [todoListId_2]: [{id: 21, title: "Beer", isDone: true},
         {id: 22, title: "Meat", isDone: true},
         {id: 23, title: "Bread", isDone: false}],
-    [33 + 66] : [],
-    [getPropName('Bob')] : [],
-    "user name": [],
-    "123_name": []
 }
 
-// console.log(tasks2[todoListId_1])
-// console.log(tasks2[todoListId_2])
 
 function getPropName(userName) {
     return `${userName.toUpperCase()}_name`
 }
 
-console.log(tasks2['user name'])
+function createTodoList(title) {
+    const newTodoListID = crypto.randomUUID()
+    const newTodoList = {id: newTodoListID, title, filter}
+}
 
-const mapCollection = new Map()
-mapCollection.set(true, 1000)
-mapCollection.set(getPropName, ['Alex', 'Bob', 'Ann'])
+
+
