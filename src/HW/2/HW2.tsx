@@ -5,6 +5,7 @@ export type AddressType = {
   street: string;
   city: string;
 };
+export  type ValueType = 'A' | 'B'
 
 export type UserType = {
   id: number;
@@ -14,7 +15,7 @@ export type UserType = {
 };
 
 export type UsersObjectType = {
-  myFriends: any
+  myFriends: Array<UserType>
 };
 
 export const HW2 = () => {
@@ -28,6 +29,7 @@ export const HW2 = () => {
   // - приложение должно компилироваться и запускаться в браузере
 
   // ❗ Массив с данными не трогаем!
+
 
   const users = {
     myFriends:[
@@ -44,11 +46,19 @@ export const HW2 = () => {
     ]
   }
 
+
+
   let [currentUsers, setCurrentUsers] = useState<UsersObjectType>(users);
 
-  const filterUsers = () => {
-    const filteredUsers = myFriends.filter(item => item.address.city === 'Los Angeles');
-    setCurrentUsers({ myFriends: filteredUsers });
+  const filterUsers = (value: ValueType) => {
+   const filtredUsers
+    if (value === "A") {
+      filtredUsers = users.myFriends.filter((item: UserType) => item.address.city === 'Los Angeles'
+   }else {
+      filtredUsers = users.myFriends.filter((item: UserType) => item.address.city === 'San Francisco'
+   }
+   )
+    setCurrentUsers({myFriends:filtredUsers})
   };
 
   return (
