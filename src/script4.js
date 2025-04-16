@@ -39,7 +39,9 @@ const tasks2 = {
         {id: 22, title: "Meat", isDone: true},
         {id: 23, title: "Bread", isDone: false}],
     [33 + 66] : [],
-    [getPropName('Bob')] : []
+    [getPropName('Bob')] : [],
+    "user name": [],
+    "123_name": []
 }
 
 // console.log(tasks2[todoListId_1])
@@ -49,4 +51,8 @@ function getPropName(userName) {
     return `${userName.toUpperCase()}_name`
 }
 
-console.log(tasks2)
+console.log(tasks2['user name'])
+
+const mapCollection = new Map()
+mapCollection.set(true, 1000)
+mapCollection.set(getPropName, ['Alex', 'Bob', 'Ann'])
