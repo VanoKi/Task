@@ -37,8 +37,16 @@ const tasks2 = {
         {id: 13, title: "JS/TS", isDone: false},],
     [todoListId_2]: [{id: 21, title: "Beer", isDone: true},
         {id: 22, title: "Meat", isDone: true},
-        {id: 23, title: "Bread", isDone: false}]
+        {id: 23, title: "Bread", isDone: false}],
+    [33 + 66] : [],
+    [getPropName('Bob')] : []
 }
 
-console.log(tasks2[todoListId_1])
-console.log(tasks2[todoListId_2])
+// console.log(tasks2[todoListId_1])
+// console.log(tasks2[todoListId_2])
+
+function getPropName(userName) {
+    return `${userName.toUpperCase()}_name`
+}
+
+console.log(tasks2)
