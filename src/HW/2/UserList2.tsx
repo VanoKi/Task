@@ -2,16 +2,16 @@ import {CurrentUser} from './CurrentUser';
 import {UsersObjectType, UserType, ValueType} from './HW2';
 
 type UserList2PropsType = {
-	users: any // пропиши типизацию
-	filterUsers: any
-};
-
-type List2Type = {
 	users: UsersObjectType
 	filterUsers: (value: ValueType) => void
-}
+};
 
-export const UserList2 = (props: List2Type) => {
+// type List2Type = {
+// 	users: UsersObjectType
+// 	filterUsers: (value: ValueType) => void
+// }
+
+export const UserList2 = (props: UserList2PropsType) => {
 	return (
 		<div id={'hw02-users'}>
 			<h2>User List:</h2>
