@@ -25,6 +25,7 @@ export const HW3 = () => {
 
   const handleSave = () => {
     setTexts([currentText, ...texts])
+    setCurrentText('')
   };
 
   return (
