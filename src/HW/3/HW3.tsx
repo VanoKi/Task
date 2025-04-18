@@ -15,14 +15,16 @@ export const HW3 = () => {
   const [texts, setTexts] = useState<string[]>([
     'То, что вы делаете по ночам, то и делает вас богатым. (Аль Капоне)',
   ]);
+  console.log(currentText)
+  console.log(texts)
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
-    console.log(event.currentTarget.value)
+    // console.log(event.currentTarget.value)
     setCurrentText(event.currentTarget.value);
   };
 
-  const handleSave = (newTask: string) => {
-    setTexts([newTask, ...texts])
+  const handleSave = () => {
+    setTexts([currentText, ...texts])
   };
 
   return (
@@ -35,7 +37,7 @@ export const HW3 = () => {
 
       <input id={'hw03-input'} type="text" value={currentText}  onChange={handleChange}/>
 
-      <button id={'hw03-button'} onClick={() => {}}>
+      <button id={'hw03-button'} onClick={handleSave}>
         Сохранить
       </button>
 
